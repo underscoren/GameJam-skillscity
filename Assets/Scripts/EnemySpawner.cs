@@ -12,11 +12,13 @@ public class EnemySpawner : MonoBehaviour
     private int _enemiesPerWave;
     [SerializeField]
     private float _waveDuration;
+    [SerializeField]
+    private float _waveOffset;
 
     private bool _doSpawn;
 
     void Start() {
-        SpawnWave();
+        InvokeRepeating("SpawnWave", _waveDuration, _waveDuration);
     }
 
     void SpawnEnemy(Vector3 position) {

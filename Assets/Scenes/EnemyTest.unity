@@ -266,8 +266,9 @@ MonoBehaviour:
   _spawnBox: {fileID: 1549533451}
   enemies:
   - {fileID: 8113114611600364999, guid: d3b26565c80251f4789216f0397fb0cd, type: 3}
-  _enemiesPerWave: 5
-  _waveDuration: 1
+  _enemiesPerWave: 2
+  _waveDuration: 3
+  _waveOffset: 1.5
 --- !u!4 &1549533453
 Transform:
   m_ObjectHideFlags: 0

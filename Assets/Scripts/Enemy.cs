@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
         transform.position = pos;
 
         if (pos.y < -10)
-            Destroy(this);
+            Destroy(gameObject);
     }
 
     public void OnTriggerEnter2D(Collider2D other) {
