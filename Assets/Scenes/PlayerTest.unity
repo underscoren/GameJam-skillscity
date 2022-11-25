@@ -214,6 +214,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3704519141939672048, guid: a1241ecc7e942e24c99003c59c72258b, type: 3}
+      propertyPath: _speed
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3704519141939672048, guid: a1241ecc7e942e24c99003c59c72258b, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 3715545468232684197, guid: a1241ecc7e942e24c99003c59c72258b, type: 3}
       propertyPath: m_Name
       value: Player
