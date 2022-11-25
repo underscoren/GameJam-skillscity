@@ -7,6 +7,12 @@ public class Enemy : MonoBehaviour
     [SerializeField]
     private float _speed = 3.5f;
 
+    private GameManager gm;
+
+    void Start() {
+        gm = GameObject.FindGameObjectWithTag("GameManager").GetComponent<GameManager>();
+    }
+
     void Update() {
         var pos = transform.position;
         pos -= new Vector3(0,_speed * Time.deltaTime,0);
@@ -16,9 +22,11 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject);
     }
 
-    public void OnTriggerEnter2D(Collider2D other) {
-        if(other.CompareTag("Player")) {
-            Destroy(other);
+    public void OnCollisionEnter2D(Collision2D other) {
+        Debug.Log("Collision");
+        if(other.gameObject.CompareTag("Player")) {
+            Destroy(other.gameObject);
+            gm.GameOver();
         }
     }
 }
