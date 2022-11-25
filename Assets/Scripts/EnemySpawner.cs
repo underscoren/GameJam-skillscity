@@ -22,7 +22,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemy(Vector3 position) {
         int randomIndex = Random.Range(0, enemies.Length);
         Instantiate(enemies[randomIndex], position, Quaternion.identity);
-        Debug.Log("spawning enemy at" + position);
+        //Debug.Log("spawning enemy at" + position);
     }
 
     void SpawnWave() {
